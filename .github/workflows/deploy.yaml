@@ -39,3 +39,6 @@ jobs:
             ${{ secrets.DOCKERHUB_USERNAME }}/dwellings-be:${{ github.sha }}
           cache-from: type=gha
           cache-to: type=gha,mode=max
+      - name: Trigger Render Deploy Hook
+          run: |
+            curl -fX POST "${{ secrets.RENDER_DEPLOY_HOOK }}"
