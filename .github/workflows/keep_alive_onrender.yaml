@@ -9,6 +9,7 @@ on:
 
 jobs:
   ping-render:
+    environment: prod
     runs-on: ubuntu-latest
     steps:
       - name: Ping Render Instance
