@@ -1,0 +1,16 @@
+name: Keep Render App Alive
+
+on:
+  schedule:
+    # Runs every 14 minutes (Render spins down at 15 minutes)
+    - cron: '*/14 * * * *'
+  # Allows you to manually trigger the ping from the Actions tab
+  workflow_dispatch: 
+
+jobs:
+  ping-render:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Ping Render Instance
+        run: |
+          curl -sS https://dwellings-be-latest.onrender.com/health || echo "Ping failed but continuing..."
