@@ -10,7 +10,7 @@ permissions:
 
 jobs:
   push-to-registry:
-    name: Build and Push Docker Image
+    name: Build and Push Docker Image and Deploy it on Onrender
     runs-on: ubuntu-latest
     # 1. Direct this job to use your 'prod' environment configuration
     environment: prod
