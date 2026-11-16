@@ -2,8 +2,8 @@ name: Keep Render App Alive
 
 on:
   schedule:
-    # Runs every 14 minutes (Render spins down at 15 minutes)
-    - cron: '*/14 * * * *'
+    # Runs every 5 minutes (Render spins down at 15 minutes)
+    - cron: '*/5 * * * *'
   # Allows you to manually trigger the ping from the Actions tab
   workflow_dispatch: 
 
